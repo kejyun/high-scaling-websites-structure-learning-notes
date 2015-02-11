@@ -9,3 +9,5 @@ Blog : http://blog.kejyun.com
 Facebook : http://fb.me/kejyunTaiwan
 
 Email : kejyun@gmail.com
+
+gitbook : http://kejyuntw.gitbooks.io/high-scaling-websites-structure-learning-notes/
