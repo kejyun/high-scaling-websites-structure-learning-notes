@@ -7,3 +7,6 @@
   * [Web 與 Database 分手](Architecture-Evolution/Architecture-Evolution-Break-Up.md)
   * [前端靜態頁面暫存](Architecture-Evolution/Architecture-Evolution-Static-Page-Cache.md)
   * [動態頁面片段暫存](Architecture-Evolution/Architecture-Evolution-Static-Page-Cache.md)
+* [參考資料](Reference/README.md)
+  * [書籍](Reference/Reference-Books.md)
+  * [文章](Reference/Reference-Article.md)
