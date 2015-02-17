@@ -12,8 +12,8 @@
   * [增加 Database Server](Architecture-Evolution/Architecture-Evolution-Add-Database-Server.md)
   * [分散式資料](Architecture-Evolution/Architecture-Evolution-Data-Distribute.md)
   * [增加更多的 Web Server](Architecture-Evolution/Architecture-Evolution-Add-More-Web-Server.md)
-  * [Database 讀寫分離](Architecture-Evolution-Set-Database-Read-Write-Server)
-  分錶、DAL和分佈式緩存
+  * [Database 讀寫分離](Architecture-Evolution/Architecture-Evolution-Set-Database-Read-Write-Server.md)
+  * [高可用性的服務架構](Architecture-Evolution/Architecture-Evolution-High-Useability-Service-Structure.md)
 * [參考資料](Reference/README.md)
   * [書籍](Reference/Reference-Books.md)
   * [文章](Reference/Reference-Article.md)
