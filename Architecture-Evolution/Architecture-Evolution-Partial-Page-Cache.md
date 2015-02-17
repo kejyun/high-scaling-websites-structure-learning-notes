@@ -6,7 +6,7 @@
 
 ***架構圖：***
 
-![動態資料快取](http://i.imgur.com/YfClhCO.png)
+![頁面片段暫存](http://i.imgur.com/YfClhCO.png)
 
 ## 參考資料
 * [一步步構建大型網站架構- 架構設計- | 九街| 白開水的博客](http://www.9streets.cn/art-php-489.html)

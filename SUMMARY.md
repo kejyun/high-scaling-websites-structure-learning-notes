@@ -8,6 +8,7 @@
   * [前端靜態頁面暫存](Architecture-Evolution/Architecture-Evolution-Static-Page-Cache.md)
   * [頁面片段暫存](Architecture-Evolution/Architecture-Evolution-Partial-Page-Cache.md)
   * [動態資料快取](Architecture-Evolution/Architecture-Evolution-Dynamic-Data-Cache.md)
+  * [增加 Web Server](Architecture-Evolution/Architecture-Evolution-Add-Web-Server.md)
 * [參考資料](Reference/README.md)
   * [書籍](Reference/Reference-Books.md)
   * [文章](Reference/Reference-Article.md)
