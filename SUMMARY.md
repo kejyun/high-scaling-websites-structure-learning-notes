@@ -10,6 +10,8 @@
   * [動態資料快取](Architecture-Evolution/Architecture-Evolution-Dynamic-Data-Cache.md)
   * [增加 Web Server](Architecture-Evolution/Architecture-Evolution-Add-Web-Server.md)
   * [增加 Database Server](Architecture-Evolution/Architecture-Evolution-Add-Database-Server.md)
+  * [分散式資料](Architecture-Evolution/Architecture-Evolution-Data-Distribute.md)
+  分錶、DAL和分佈式緩存
 * [參考資料](Reference/README.md)
   * [書籍](Reference/Reference-Books.md)
   * [文章](Reference/Reference-Article.md)
