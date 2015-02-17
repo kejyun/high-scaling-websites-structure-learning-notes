@@ -60,7 +60,7 @@ SELECT * FROM posts WHERE post_id = '部落格文章編號' Limit 1;
 
 ### 資料庫讀寫分離
 
-以部落格文章為例，在 [80/20法則](http://wiki.mbalib.com/zh-tw/80/20%E6%B3%95%E5%88%99)中，大部份 80% 人都是在看文章比較多（讀取資料：SELECT），只有少部分 20% 的人或意見領袖，才會發表文章表示看法（異動資料：INSERT、UPDATE、DELETE），而在做資料異動的時候很有可能會對資料進行鎖定，進而去影響讀取的速度。
+以部落格文章為例，在 [80/20 法則](http://wiki.mbalib.com/zh-tw/80/20%E6%B3%95%E5%88%99)中，大部份 80% 人都是在看文章比較多（讀取資料：SELECT），只有少部分 20% 的人或意見領袖，才會發表文章表示看法（異動資料：INSERT、UPDATE、DELETE），而在做資料異動的時候很有可能會對資料進行鎖定，進而去影響讀取的速度。
 
 > 除了有關交易（Transaction）的資料在 SELECT 的時候才有可能對資料進行鎖定，像是購票或購買限量商品時，會把撈取出來加入購物車的資料先行鎖定
 
@@ -130,4 +130,4 @@ SELECT * FROM posts WHERE post_id = '部落格文章編號' Limit 1;
 ## 參考資料
 * [B樹 - 維基百科，自由的百科全書](http://zh.wikipedia.org/wiki/B%E6%A0%91)
 * [全文檢索 - 維基百科，自由的百科全書](http://zh.wikipedia.org/wiki/%E5%85%A8%E6%96%87%E6%AA%A2%E7%B4%A2)
-* [80/20法則](http://wiki.mbalib.com/zh-tw/80/20%E6%B3%95%E5%88%99)
+* [80/20 法則](http://wiki.mbalib.com/zh-tw/80/20%E6%B3%95%E5%88%99)

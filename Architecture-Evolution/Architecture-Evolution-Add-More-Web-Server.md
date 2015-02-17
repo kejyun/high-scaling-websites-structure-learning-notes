@@ -19,6 +19,6 @@
 這時可以根據不同的網站業務需求去做不同的分散式文件系統
 
 ## 參考資料
-
+* [一步步構建大型網站架構- 架構設計- | 九街| 白開水的博客](http://www.9streets.cn/art-php-489.html)
 * [F5 Load Balancer](https://f5.com/glossary/load-balancer)
 * [Netsclar Load Balancer](http://www.citrix.com.tw/products/netscaler-application-delivery-controller/overview.html)
