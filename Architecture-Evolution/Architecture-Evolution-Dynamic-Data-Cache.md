@@ -8,7 +8,7 @@
 
 ***架構圖：***
 
-![動態資料快取](http://i.imgur.com/Fn94NYg.png)
+![動態資料快取](http://i.imgur.com/sbORt7G.png)
 
 ## 注意事項
 
