@@ -118,59 +118,59 @@ MySQL用來返回資料的筆數，可以簡單的把rows視為執行效能，�
 MySQL用來解析額外的查詢訊息
 
 
-#### Distinct
+- Distinct
 
 當MySQL找到相關連的資料時，就不再搜尋。
 
-#### Not exists
+- Not exists
 
 MySQL優化 LEFT JOIN，一旦找到符合的LEFT JOIN資料後，就不再搜尋。
 
-#### Range checked for each Record(index map:#)
+- Range checked for each Record(index map:#)
 
 無法找到理想的索引。此為最慢的使用索引。
 
-#### Using filesort
+- Using filesort
 
 當出現這個值時，表示此SELECT語法需要優化。因為MySQL必須進行額外的步驟來進行查詢。
 
-#### Using index
+- Using index
 
 返回的資料是從索引中資料，而不是從實際的資料中返回，當返回的資料都出現在索引中的資料時就會發生此情況。
 
-#### Using temporary
+- Using temporary
 
 同Using filesort，表示此SELECT語法需要進行優化。此為MySQL必須建立一個暫時的資料表(Table)來儲存結果，此情況會發生在針對不同的資料進行ORDER BY，而不是GROUP BY。
 
-#### Using where
+- Using where
 
 使用WHERE語法中的欄位來返回結果。
 
-#### System
+- System
 
 system資料表，此為const連接類型的特殊情況。
 
-#### Const
+- Const
 
 資料表中的一個記錄的最大值能夠符合這個查詢。因為只有一行，這個值就是常數，因為MySQL會先讀這個值然後把它當做常數。
 
-#### eq_ref
+- eq_ref
 
 MySQL在連接查詢時，會從最前面的資料表，對每一個記錄的聯合，從資料表中讀取一個記錄，在查詢時會使用索引為主鍵或唯一鍵的全部。
 
-#### ref
+- ref
 
 只有在查詢使用了非唯一鍵或主鍵時才會發生。
 
-#### range
+- range
 
 使用索引返回一個範圍的結果。例如：使用大於>或小於<查詢時發生。
 
-#### index
+- index
 
 此為針對索引中的資料進行查詢。
 
-#### ALL
+- ALL
 
 針對每一筆記錄進行完全掃描，此為最壞的情況，應該盡量避免。
 
