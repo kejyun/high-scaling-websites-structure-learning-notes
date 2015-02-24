@@ -37,14 +37,14 @@ FROM post
 
 ```php
 <?php
-$user['user.id'] = array()
+$user['user.id'] = array();
 ```
 
 在撈取文章資料後，必須將撈取的文章指定給該文章的作者（使用者），而我們撈取的使用有撈取「使用者編號（user.id）」，所以可以透過這個資料，將文章存到使用者資料下的文章陣列。
 
 ```php
 <?php
-$user[$post['user_id']]['post'] = $post_array
+$user[$post['user_id']]['post'] = $post_array;
 ```
 
 透過分次撈取，本來的 `10000x99999=999990000` 筆資料，就會變成 `10000+99999=109999` 筆資料，記憶體消耗降低極大下，也可以達到同樣的功能
