@@ -70,6 +70,28 @@ AND post_status = '正常'
 
 因為索引順序的不同，以及 SQL WHERE 條件順序的不同，會使得資料庫在使用索引進行查詢有不同的效率，所以要謹慎的使用索引及 SQL 語法，才能達到高效率的查詢結果。
 
+
+## 控制索引更新
+
+
+### 關閉索引更新：
+
+```sql
+ALTER TABLE table_name DISABLE KEYS;
+```
+### 開啟索引更新：
+```sql
+ALTER TABLE table_name ENABLE KEYS;
+```
+
+MySQL在新增（INSERT）、刪除（DELETE）、更新（UPDATE）的時候會去更新現有的索引表，而更新索引表也需要花費一些時間，當異動一筆資料的時候，索引表也做一次的異動，但當在做大量資料異動的時候，例如異動1000筆資料，索引表也需要異動1000次，而其實我們只需要最後一次（最新）的異動就好了，前面的999次都是不需要做的索引表異動更新，所以在異動大量資料前，可以使用指令 `ALTER TABLE table_name DISABLE KEYS;` 關閉索引更新，等異動完成後，再使用指令 `ALTER TABLE table_name ENABLE KEYS;` 開啟索引更新。
+
+```sql
+ALTER TABLE users DISABLE KEYS;
+異動（INSERT、DELETE、UPDATE）大量資料SQL語法
+ALTER TABLE users ENABLE KEYS;
+```
+
 ## 自定義Hash Index做字串完整比對
 
 我們知道在對`字串（CHAR或VARCHAR）`去做查找的時候效率會遠比對`整數（INT）`查找還慢，因CRC32對字串做校驗後會回傳`整數的校驗碼`，我們在資料表增加一個整數型態欄位，儲存要比對字串的校驗碼。
@@ -108,4 +130,9 @@ AND password="xxx"
 
 ## 參考資料
 * [KeJyun學習日誌: 提高存取MySQL效率小技巧](http://blog.kejyun.com/2012/12/Tips-For-Use-MySQL-With-High-Performance.html)
+* [KeJyun學習日誌: MySQL效率調校](http://blog.kejyun.com/2012/12/MySQL-Efficiency-Adjustment.html)
+* [MySQL Indexing: Best Practices Slide PDF](http://www.percona.com/files/presentations/WEBINAR-MySQL-Indexing-Best-Practices.pdf)
+* [Tools and Techniques for Index Design PDF Slide](http://www.percona.com/files/presentations/WEBINAR-tools-and-techniques-for-index-design.pdf)
+* [EXPLAIN Demystified PDF slide](http://www.percona.com/files/presentations/WEBINAR2012-02-Explain-Demystified.pdf)
+* [Optimizing MySQL Configuration PDF Slide](http://www.percona.com/files/presentations/percona-live/london-2012/PLUK2012-optimizing-mysql-configuration.pdf)
 * [PHP手冊 - crc32](http://por.tw/Website_Design/PHP5/function.crc32.html)

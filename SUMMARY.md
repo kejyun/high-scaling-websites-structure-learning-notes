@@ -8,6 +8,8 @@
     * [程式語法](Database/Database-MySQL-Code-SQL.md)
     * [索引](Database/Database-MySQL-Index.md)
     * [鎖表](Database/Database-MySQL-Lock-Table.md)
+    * [交易](Database/Database-MySQL-Transaction.md)
+    * [伺服器](Database/Database-MySQL-Server.md)
 * [程式](Code/Code-README.md)
 * [網站架構演進](Architecture-Evolution/Architecture-Evolution-README.md)
   * [Web 與 Database 在一起](Architecture-Evolution/Architecture-Evolution-All-Together.md)
