@@ -12,6 +12,7 @@
     * [伺服器](Database/Database-MySQL-Server.md)
     * [SELECT 語法效能測試](Database/Database-MySQL-SELECT-SQL-Explain-Test.md)
 * [程式](Code/Code-README.md)
+  * [陣列](Code/Code-Array.md)
 * [網站架構演進](Architecture-Evolution/Architecture-Evolution-README.md)
   * [Web 與 Database 在一起](Architecture-Evolution/Architecture-Evolution-All-Together.md)
   * [Web 與 Database 分手](Architecture-Evolution/Architecture-Evolution-Break-Up.md)
