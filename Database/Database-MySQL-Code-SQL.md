@@ -11,7 +11,7 @@ ORDER BY id
 
 在下SQL語法的時候，有時某些語法使用某些索引執行效率會比較好，可是有時候MySQL沒辦法替我們選擇一個最適合的索引，導致執行的效率很慢（slow query），所以我們必須使用USE INDEX去指定執行效率好的索引，以提升效率。
 
-## 少用JOIN，多用幾次SELECT撈取大量資料
+## 少用 JOIN，多用幾次 SELECT 撈取大量資料
 
 ```sql
 SELECT user.id , user.name , post.id , post.content
@@ -48,6 +48,44 @@ $user[$post['user_id']]['post'] = $post_array;
 ```
 
 透過分次撈取，本來的 `10000x99999=999990000` 筆資料，就會變成 `10000+99999=109999` 筆資料，記憶體消耗降低極大下，也可以達到同樣的效果
+
+## 更新或刪除大量範圍的資料，請用主鍵去更新
+
+我們可能會想要一次異動大範圍的資料，若以社群網站的`通知（Notification）`來說，我們希望在使用者點選通知列表後，將所有的通知從未讀狀態變更為已讀，我們可以很容易地想到用這樣的 SQL 語法去進行更新：
+
+```sql
+UPDATE `notification` SET status="已讀" WHERE created_at < '現在時間';
+```
+
+若我們要刪除大量的資料時，我們也可能用這樣的 SQL 語法去刪除資料：
+
+```sql
+DELETE FROM `backup` WHERE created_at < '現在時間';
+```
+
+但是在這樣的條件為範圍的語法，資料庫會需要一筆一筆的去比對資料是否為設定條件的範圍，若為`交易`的資料，資料庫會將資料進行鎖定禁止讀取，有可能鎖定一些非我們要處理的資料，若處理時間過久，可能會導致撈取資料的反應時間過久。
+
+所以通常為了避免`鎖定不必要資料`的情況發生，我們可以試著先把資料撈取出來，再透過`明確的主鍵`去指定哪些異動的資料需要被鎖定，而不影響其他的資料。
+
+### 更新資料（較佳作法）
+
+```sql
+-- 先撈取資料
+SELECT `notification` WHERE status="未讀" AND created_at < '現在時間';
+
+-- 指定要更新資料的主鍵
+UPDATE `notification` SET status="已讀" WHERE  id IN (1, 2, 3);
+```
+
+### 刪除資料（較佳作法）
+
+```sql
+-- 先撈取資料
+SELECT `backup` WHERE created_at < '現在時間';
+
+-- 指定要刪除資料的主鍵
+DELETE FROM `backup` WHERE id IN (1, 2, 3);
+```
 
 ## 參考資料
 * [KeJyun學習日誌: 提高存取MySQL效率小技巧](http://blog.kejyun.com/2012/12/Tips-For-Use-MySQL-With-High-Performance.html)
