@@ -87,5 +87,7 @@ SELECT `backup` WHERE created_at < '現在時間';
 DELETE FROM `backup` WHERE id IN (1, 2, 3);
 ```
 
+在服務會有大量的人撈取資料的時候，這樣可以避免不必要的資料鎖定，也可以讓存取速度加快喔～
+
 ## 參考資料
 * [KeJyun學習日誌: 提高存取MySQL效率小技巧](http://blog.kejyun.com/2012/12/Tips-For-Use-MySQL-With-High-Performance.html)
