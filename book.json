@@ -1,0 +1,11 @@
+{
+  "plugins": ["disqus","ga"],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "kejyun-high-scaling-websites-structure"
+    },
+    "ga": {
+      "token": "UA-31063691-11"
+    }
+  }
+}
