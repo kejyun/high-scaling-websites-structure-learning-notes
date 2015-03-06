@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [概念](High-Scaling-Websites-Structure-Concept.md)
-* [資料庫](Database/README.md)
+* [資料庫](Database/Database-README.md)
   * [MySQL](Database/Database-MySQL-README.md)
     * [資料類型](Database/Database-MySQL-DataType.md)
     * [程式語法](Database/Database-MySQL-Code-SQL.md)
