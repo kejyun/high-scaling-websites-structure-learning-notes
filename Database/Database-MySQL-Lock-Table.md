@@ -20,7 +20,7 @@
 
 | SQL	| Table lock | Row lock |	No lock	| 備註
 | ------------- |:-------------:|:-------------:|:-------------:|:-------------:|
-| SELECT * FROM user WHERE id='1' FOR UPDATE; | v | - | - | 明確指定主鍵，並且有此筆資料，row lock |
+| SELECT * FROM user WHERE id='1' FOR UPDATE; | - | v | - | 明確指定主鍵，並且有此筆資料，row lock |
 | SELECT * FROM user WHERE id='-1' FOR UPDATE; | - | - | v | 明確指定主鍵，若查無此筆資料，無 lock |
 | SELECT * FROM user WHERE name='KeJyun' FOR UPDATE; | v | - | - |  無主鍵，table lock |
 | SELECT * FROM user WHERE id<>'1' FOR UPDATE; | v | - | - | 主鍵不明確，table lock |
