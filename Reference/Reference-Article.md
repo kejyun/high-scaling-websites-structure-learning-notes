@@ -2,6 +2,7 @@
 
 ## 概念
 * [一步步構建大型網站架構- 架構設計- | 九街| 白開水的博客](http://www.9streets.cn/art-php-489.html)
+* [10+個高流量網站架構的效能提升解決方案](http://www.qa-knowhow.com/?p=2314)
 
 ## 資料庫
 
