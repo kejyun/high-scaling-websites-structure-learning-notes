@@ -28,6 +28,7 @@
 * [Laravel 4 學習筆記](http://kejyuntw.gitbooks.io/laravel-4-learning-notes/)
 * [Laravel 5 學習筆記](http://kejyuntw.gitbooks.io/laravel-5-learning-notes/)
 * [SEO 學習筆記](http://kejyuntw.gitbooks.io/seo-learning-notes/)
+* [gulp 學習筆記](http://kejyuntw.gitbooks.io/gulp-learning-notes/)
 * [Web Developer Learning Resource 網頁開發學習資源](http://kejyuntw.gitbooks.io/web-developer-learning-resource/)
 * [Mac OSX 新手入門](http://kejyuntw.gitbooks.io/mac-osx-for-newbie/)
 * [Ruby on Rails 學習筆記](http://kejyuntw.gitbooks.io/ruby-on-rails-learning-note/)
