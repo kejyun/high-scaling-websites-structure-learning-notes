@@ -1,0 +1,978 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>索引 | High Scaling Websites Structure Learning Notes 大型網站架構學習筆記</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../Database/Database-MySQL-Lock-Table.html" />
+    
+    
+    <link rel="prev" href="../Database/Database-MySQL-Code-SQL.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="2.2.3" data-basepath=".." data-revision="Fri Nov 13 2015 06:50:15 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        介紹
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="High-Scaling-Websites-Structure-Concept.html">
+            
+                
+                    <a href="../High-Scaling-Websites-Structure-Concept.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        概念
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="Database/Database-README.html">
+            
+                
+                    <a href="../Database/Database-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        資料庫
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="Database/Database-Data-Permutations.html">
+            
+                
+                    <a href="../Database/Database-Data-Permutations.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        資料排列組合
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Database/Database-MySQL-README.html">
+            
+                
+                    <a href="../Database/Database-MySQL-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        MySQL
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="Database/Database-MySQL-DataType.html">
+            
+                
+                    <a href="../Database/Database-MySQL-DataType.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        資料類型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="Database/Database-MySQL-Code-SQL.html">
+            
+                
+                    <a href="../Database/Database-MySQL-Code-SQL.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.2.</b>
+                        
+                        程式語法
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.3" data-path="Database/Database-MySQL-Index.html">
+            
+                
+                    <a href="../Database/Database-MySQL-Index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        索引
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="Database/Database-MySQL-Lock-Table.html">
+            
+                
+                    <a href="../Database/Database-MySQL-Lock-Table.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.4.</b>
+                        
+                        鎖表
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="Database/Database-MySQL-Transaction.html">
+            
+                
+                    <a href="../Database/Database-MySQL-Transaction.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.5.</b>
+                        
+                        交易
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="Database/Database-MySQL-Server.html">
+            
+                
+                    <a href="../Database/Database-MySQL-Server.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.6.</b>
+                        
+                        伺服器
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="Database/Database-MySQL-SELECT-SQL-Explain-Test.html">
+            
+                
+                    <a href="../Database/Database-MySQL-SELECT-SQL-Explain-Test.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.7.</b>
+                        
+                        SELECT 語法效能測試
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Code/Code-README.html">
+            
+                
+                    <a href="../Code/Code-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        程式
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="Code/Code-Array.html">
+            
+                
+                    <a href="../Code/Code-Array.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        陣列
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="Cache/Cache-README.html">
+            
+                
+                    <a href="../Cache/Cache-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        快取
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="Cache/Cache-Set-Cache.html">
+            
+                
+                    <a href="../Cache/Cache-Set-Cache.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        設定
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="Cache/Cache-Delete-Cache.html">
+            
+                
+                    <a href="../Cache/Cache-Delete-Cache.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        刪除
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="File/File-README.html">
+            
+                
+                    <a href="../File/File-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        檔案
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="Architecture-Evolution/Architecture-Evolution-README.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        網站架構演進
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="Architecture-Evolution/Architecture-Evolution-All-Together.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-All-Together.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Web 與 Database 在一起
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="Architecture-Evolution/Architecture-Evolution-Break-Up.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Break-Up.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Web 與 Database 分手
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="Architecture-Evolution/Architecture-Evolution-Static-Page-Cache.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Static-Page-Cache.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        前端靜態頁面暫存
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="Architecture-Evolution/Architecture-Evolution-Partial-Page-Cache.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Partial-Page-Cache.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        頁面片段暫存
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="Architecture-Evolution/Architecture-Evolution-Dynamic-Data-Cache.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Dynamic-Data-Cache.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        動態資料快取
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="Architecture-Evolution/Architecture-Evolution-Add-Web-Server.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Add-Web-Server.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        增加 Web Server
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="Architecture-Evolution/Architecture-Evolution-Add-Database-Server.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Add-Database-Server.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        增加 Database Server
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="Architecture-Evolution/Architecture-Evolution-Data-Distribute.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Data-Distribute.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        分散式資料
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="Architecture-Evolution/Architecture-Evolution-Add-More-Web-Server.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Add-More-Web-Server.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.</b>
+                        
+                        增加更多的 Web Server
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.10" data-path="Architecture-Evolution/Architecture-Evolution-Set-Database-Read-Write-Server.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Set-Database-Read-Write-Server.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.10.</b>
+                        
+                        Database 讀寫分離
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.11" data-path="Architecture-Evolution/Architecture-Evolution-High-Useability-Service-Structure.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-High-Useability-Service-Structure.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.11.</b>
+                        
+                        高可用性的服務架構
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="Question/Question-README.html">
+            
+                
+                    <a href="../Question/Question-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        常見問題
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="Question/Question-Benchmark.html">
+            
+                
+                    <a href="../Question/Question-Benchmark.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        壓力測試
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="Reference/Reference-README.html">
+            
+                
+                    <a href="../Reference/Reference-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        參考資料
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="Reference/Reference-Books.html">
+            
+                
+                    <a href="../Reference/Reference-Books.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        書籍
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Reference/Reference-Article.html">
+            
+                
+                    <a href="../Reference/Reference-Article.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        文章
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Reference/Reference-Tool.html">
+            
+                
+                    <a href="../Reference/Reference-Tool.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        工具
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >High Scaling Websites Structure Learning Notes 大型網站架構學習筆記</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E7%B4%A2%E5%BC%95">&#x7D22;&#x5F15;</h1>
+<h2 id="%E7%B4%A2%E5%BC%95%E9%A0%86%E5%BA%8F">&#x7D22;&#x5F15;&#x9806;&#x5E8F;</h2>
+<p>&#x5728;&#x6240;&#x6709;&#x7684;&#x8CC7;&#x6599;&#x5EAB;&#x5167;&#xFF0C;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#x662F;&#x63D0;&#x6607;&#x8CC7;&#x6599;&#x5EAB;&#x8CC7;&#x6599;&#x5B58;&#x53D6;&#x6548;&#x7387;&#x7684;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x932F;&#x8AA4;&#x7684;<code>&#x7D22;&#x5F15;&#x9806;&#x5E8F;</code>&#x6216;&#x662F; <code>SQL &#x8A9E;&#x6CD5;</code> &#x90FD;&#x53EF;&#x80FD;&#x8B93;&#x67E5;&#x8A62;&#x8A9E;&#x6CD5;&#x8B8A;&#x6210;&#x4E86; slow query&#x3002;</p>
+<p>&#x5047;&#x8A2D;&#x6211;&#x5011;&#x6709;&#x4E00;&#x500B;&#x90E8;&#x843D;&#x683C;&#x6587;&#x7AE0;&#x7684;&#x8CC7;&#x6599;&#x8868;&#xFF0C;&#x88E1;&#x982D;&#x5B58;&#x653E;&#x6240;&#x6709;&#x4F7F;&#x7528;&#x8005;&#x7684;&#x90E8;&#x843D;&#x683C;&#x6587;&#x7AE0;&#xFF0C;&#x8CC7;&#x6599;&#x8868;&#x8CC7;&#x6599;&#x5982;&#x4E0B;&#xFF1A;</p>
+<h3 id="posts">posts</h3>
+<table>
+<thead>
+<tr>
+<th>post_id</th>
+<th style="text-align:center">post_status</th>
+<th style="text-align:center">author</th>
+<th style="text-align:center">content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">&#x6B63;&#x5E38;</td>
+<td style="text-align:center">kejyun</td>
+<td style="text-align:center">&#x6587;&#x7AE0; 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center">&#x522A;&#x9664;</td>
+<td style="text-align:center">kejyun</td>
+<td style="text-align:center">&#x6587;&#x7AE0; 2</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:center">&#x6B63;&#x5E38;</td>
+<td style="text-align:center">kejyun</td>
+<td style="text-align:center">&#x6587;&#x7AE0; 3</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:center">&#x6B63;&#x5E38;</td>
+<td style="text-align:center">jimmy</td>
+<td style="text-align:center">&#x6587;&#x7AE0; 4</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align:center">&#x522A;&#x9664;</td>
+<td style="text-align:center">jimmy</td>
+<td style="text-align:center">&#x6587;&#x7AE0; 5</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5982;&#x679C;&#x6211;&#x5011;&#x8981;&#x6488;&#x53D6; <code>&#x4F5C;&#x8005;&#x70BA; kejyun</code> &#x4E14; <code>&#x72C0;&#x614B;&#x6B63;&#x5E38;</code> &#x7684;&#x6587;&#x7AE0;&#xFF0C;&#x6211;&#x5011;&#x53EF;&#x80FD;&#x6703;&#x7528;&#x4E0B;&#x5217;&#x8A9E;&#x6CD5;&#x53BB;&#x6488;&#x53D6;</p>
+<h3 id="sql-%E8%AA%9E%E6%B3%95-1">SQL &#x8A9E;&#x6CD5; 1</h3>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">SELECT</span> *
+<span class="hljs-keyword">FROM</span> posts
+<span class="hljs-keyword">WHERE</span> post_status = <span class="hljs-string">&apos;&#x6B63;&#x5E38;&apos;</span>
+<span class="hljs-keyword">AND</span> author = <span class="hljs-string">&apos;kejyun&apos;</span>
+</span></code></pre>
+<p>&#x6216;&#x8005;&#x7528;&#x9019;&#x500B;&#x8A9E;&#x6CD5;&#x6488;&#x53D6;</p>
+<h3 id="sql-%E8%AA%9E%E6%B3%95-2">SQL &#x8A9E;&#x6CD5; 2</h3>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">SELECT</span> *
+<span class="hljs-keyword">FROM</span> posts
+<span class="hljs-keyword">WHERE</span> author = <span class="hljs-string">&apos;kejyun&apos;</span>
+<span class="hljs-keyword">AND</span> post_status = <span class="hljs-string">&apos;&#x6B63;&#x5E38;&apos;</span>
+</span></code></pre>
+<p>&#x9019;&#x5169;&#x53E5; SQL &#x8A9E;&#x6CD5;&#x90FD;&#x53EF;&#x4EE5;&#x6488;&#x51FA;&#x6211;&#x5011;&#x60F3;&#x8981;&#x7684;&#x7D50;&#x679C;&#xFF0C;&#x4F46;&#x662F;&#x5C0D;&#x65BC;&#x4E0D;&#x540C;&#x7684;&#x7D22;&#x5F15;&#x57F7;&#x884C;&#x7684;&#x6548;&#x7387;&#x537B;&#x662F;&#x5DEE;&#x7570;&#x5F88;&#x591A;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x5011;&#x7684;&#x7D22;&#x5F15;&#x662F; <code>post_status</code>&#x3001;<code>author</code> &#x7684;&#x9806;&#x5E8F;&#xFF0C;<code>SQL &#x8A9E;&#x6CD5; 1</code> &#x5247;&#x6703;&#x6B63;&#x78BA;&#x7684;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x4F86;&#x505A;&#x67E5;&#x8A62;&#xFF0C;&#x57F7;&#x884C;&#x7684;&#x6548;&#x7387;&#x6703;&#x5F88;&#x5FEB;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x5C0D;&#x65BC;<code>SQL &#x8A9E;&#x6CD5; 2</code>&#xFF0C;&#x6703;&#x56E0;&#x70BA;&#x627E;&#x4E0D;&#x5230;&#x9069;&#x5408;&#x8A72;&#x8A9E;&#x6CD5;&#x7684;&#x7D22;&#x5F15;&#x53BB;&#x505A;&#x67E5;&#x8A62;&#xFF0C;&#x6240;&#x4EE5;&#x6703;&#x8B8A;&#x6210;&#x4E0D;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#xFF0C;&#x800C;&#x5C0D;&#x6574;&#x500B;&#x8CC7;&#x6599;&#x8868;&#x4F5C;&#x5B8C;&#x6574;&#x7684;&#x6AA2;&#x7D22;&#xFF0C;&#x53BB;&#x67E5;&#x627E;&#x51FA;&#x8CC7;&#x6599;&#x4F86;&#x3002;</p>
+<h4 id="%E4%B8%BB%E8%A6%81%E5%8E%9F%E5%9B%A0%E6%98%AF">&#x4E3B;&#x8981;&#x539F;&#x56E0;&#x662F;</h4>
+<blockquote>
+<p>&#x5728; SQL &#x8A9E;&#x6CD5; WHERE &#x7684;&#x9806;&#x5E8F;&#x6703;&#x5F71;&#x97FF;&#x67E5;&#x8A62;&#x7D22;&#x5F15;&#x7684;&#x9806;&#x5E8F;</p>
+<p>&#x540C;&#x6A23;&#x7684;&#x7D22;&#x5F15;&#x8CC7;&#x6599;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x9806;&#x5E8F;&#xFF0C;&#x8868;&#x793A;&#x70BA;&#x4E0D;&#x540C;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x6240;&#x4EE5; <code>post_status&#x3001;author</code> &#x8207; <code>author&#x3001;post_status</code> &#x9019;&#x5169;&#x500B;&#x7D22;&#x5F15;&#x96D6;&#x7136;&#x662F;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x8CC7;&#x6599;&#x6B04;&#x4F4D;&#xFF0C;&#x4F46;&#x56E0;&#x70BA;&#x9806;&#x5E8F;&#x4E0D;&#x540C;&#x6240;&#x5E36;&#x4F86;&#x7684;&#x67E5;&#x8A62;&#x6548;&#x679C;&#x4E5F;&#x4E0D;&#x540C;</p>
+<p>&#x540C;&#x4E00;&#x53E5; SQL &#x8A9E;&#x6CD5;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x55AE;&#x4E00;&#x500B;&#x7D22;&#x5F15;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x540C;&#x7684;&#x7D22;&#x5F15;&#x6C92;&#x8FA6;&#x6CD5;&#x5171;&#x7528;</p>
+</blockquote>
+<p>&#x8CC7;&#x6599;&#x5EAB;&#x6C92;&#x6709;&#x9019;&#x9EBC;&#x4EBA;&#x5DE5;&#x667A;&#x6167;&#xFF0C;&#x6703;&#x53BB;&#x5224;&#x65B7;&#x5169;&#x500B; SQL &#x8A9E;&#x6CD5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x7D22;&#x5F15;&#x53BB;&#x67E5;&#x627E;&#x51FA;&#x76F8;&#x540C;&#x7684;&#x8CC7;&#x6599;&#xFF0C;&#x4ED6;&#x6703;&#x4F9D;&#x7167;&#x7A0B;&#x5F0F;&#x8A2D;&#x8A08;&#x5E2B;&#x7D66;&#x7684;&#x8A9E;&#x6CD5;&#xFF0C;&#x4F9D;&#x5E8F;&#x53BB;&#x67E5;&#x627E;&#x662F;&#x5426;&#x6709;&#x53EF;&#x7528;&#x7684;&#x7D22;&#x5F15;&#x3002;</p>
+<h4 id="%E5%88%86%E6%9E%90-sql-%E8%AA%9E%E6%B3%95-1">&#x5206;&#x6790; SQL &#x8A9E;&#x6CD5; 1</h4>
+<p>&#x5728; <code>SQL &#x8A9E;&#x6CD5; 1</code> &#x4E2D;&#xFF0C;&#x6211;&#x5011; WHERE &#x7684;&#x7B2C; 1 &#x500B;&#x689D;&#x4EF6;&#x662F; <code>post_status = &apos;&#x6B63;&#x5E38;&apos;</code>&#xFF0C;&#x6240;&#x4EE5;&#x8CC7;&#x6599;&#x5EAB;&#x6703;&#x53BB;&#x67E5;&#x627E;&#x6709;&#x6C92;&#x6709;&#x7D22;&#x5F15;&#x958B;&#x982D;&#x662F;&#x4F7F;&#x7528; <code>post_status</code> &#x7684;&#x7D22;&#x5F15;&#x3002;</p>
+<p>&#x82E5;&#x6709;&#x8A72;&#x7D22;&#x5F15;&#xFF0C;&#x5247;&#x518D;&#x5224;&#x65B7; WHERE &#x7684;&#x7B2C; 2 &#x500B;&#x689D;&#x4EF6; <code>author = &apos;kejyun&apos;</code>&#xFF0C;&#x6240;&#x4EE5;&#x8CC7;&#x6599;&#x5EAB;&#x6703;&#x53BB;&#x67E5;&#x627E;&#x6709;&#x6C92;&#x6709;&#x7D22;&#x5F15;&#x958B;&#x982D;&#x662F;&#x4F7F;&#x7528; <code>post_status</code> &#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x4E14;&#x8A72;&#x7D22;&#x5F15;&#x7684;&#x7B2C; 2 &#x500B;&#x7D22;&#x5F15;&#x662F;&#x4F7F;&#x7528; <code>author</code> &#x7684;&#x7D22;&#x5F15;&#x3002;</p>
+<p>&#x8CC7;&#x6599;&#x5EAB;&#x6703;&#x4E00;&#x76F4;&#x5224;&#x65B7;&#x6BD4;&#x8F03; SQL &#x8A9E;&#x6CD5; WHERE &#x689D;&#x4EF6;&#x8207;&#x7D22;&#x5F15;&#x4E4B;&#x9593;&#x7684;&#x9806;&#x5E8F;&#x95DC;&#x4FC2;&#xFF0C;&#x76F4;&#x5230;&#x6C92;&#x8FA6;&#x6CD5;&#x5339;&#x914D;&#x5F8C;&#xFF0C;&#x5F8C;&#x9762;&#x7684;&#x6C92;&#x8FA6;&#x6CD5;&#x5339;&#x914D;&#x7D22;&#x5F15;&#x5247;&#x4F7F;&#x7528;&#x5B8C;&#x6574;&#x6BD4;&#x5C0D;&#x7684;&#x65B9;&#x5F0F;&#x53BB;&#x9032;&#x884C;&#x67E5;&#x8A62;</p>
+<h4 id="%E5%88%86%E6%9E%90-sql-%E8%AA%9E%E6%B3%95-2">&#x5206;&#x6790; SQL &#x8A9E;&#x6CD5; 2</h4>
+<p>&#x5728; <code>SQL &#x8A9E;&#x6CD5; 2</code> &#x4E2D;&#xFF0C;&#x6211;&#x5011; WHERE &#x7684;&#x7B2C; 1 &#x500B;&#x689D;&#x4EF6;&#x662F; <code>author = &apos;kejyun&apos;</code> &#x4F46;&#x6211;&#x5011;&#x8CC7;&#x6599;&#x5EAB;&#x6C92;&#x6709;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#x958B;&#x982D;&#x662F;&#x4F7F;&#x7528; <code>author</code> &#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x80FD;&#x5C0D;&#x8CC7;&#x6599;&#x5EAB;&#x4F7F;&#x7528;&#x5B8C;&#x6574;&#x6BD4;&#x5C0D;&#x3002;</p>
+<h3 id="%E5%8E%9F%E7%90%86">&#x539F;&#x7406;</h3>
+<p>&#x7D22;&#x5F15;&#x5C31;&#x50CF;&#x662F;&#x66F8;&#x7C4D;&#x7684;&#x76EE;&#x9304;&#x4E00;&#x6A23;&#xFF0C;&#x82E5;&#x4EE5;&#x7AE5;&#x8A71;&#x6545;&#x4E8B;&#x66F8;&#x70BA;&#x4F8B;&#xFF0C;&#x6211;&#x5011;&#x66F8;&#x4E2D;&#x6703;&#x6536;&#x9304;&#x4E16;&#x754C;&#x5404;&#x570B;&#x7684;&#x6545;&#x4E8B;&#xFF0C;&#x4E14;&#x6BCF;&#x500B;&#x6545;&#x4E8B;&#x6709;&#x4ED6;&#x81EA;&#x5DF1;&#x7684;&#x985E;&#x578B;&#xFF0C;&#x50CF;&#x662F;&#x5947;&#x5E7B;&#x3001;&#x9A5A;&#x609A;&#x3001;&#x50B3;&#x8AAA;&#x3001;&#x795E;&#x8A71;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x5011;&#x4EE5;&#x570B;&#x5BB6;&#x7576;&#x505A;&#x5927;&#x6A19;&#x984C;&#xFF08;e.g. &#x7B2C; 1 &#x7D22;&#x5F15;&#xFF09;&#xFF0C;&#x4EE5;&#x6545;&#x4E8B;&#x985E;&#x578B;&#x7576;&#x4F5C;&#x5C0F;&#x6A19;&#x984C;&#xFF08;e.g. &#x7B2C; 2 &#x7D22;&#x5F15;&#xFF09;&#xFF0C;&#x90A3;&#x9EBC;&#x66F8;&#x7C4D;&#x76EE;&#x9304;&#x6703;&#x50CF;&#xFF1A;</p>
+<ul>
+<li>&#x53F0;&#x7063;<ul>
+<li>&#x5947;&#x5E7B;</li>
+<li>&#x9A5A;&#x609A;</li>
+<li>&#x50B3;&#x8AAA;</li>
+<li>&#x795E;&#x8A71;</li>
+</ul>
+</li>
+<li>&#x65E5;&#x672C;<ul>
+<li>&#x5947;&#x5E7B;</li>
+<li>&#x9A5A;&#x609A;</li>
+<li>&#x50B3;&#x8AAA;</li>
+<li>&#x795E;&#x8A71;</li>
+</ul>
+</li>
+<li>&#x6B50;&#x7F8E;<ul>
+<li>&#x5947;&#x5E7B;</li>
+<li>&#x9A5A;&#x609A;</li>
+<li>&#x50B3;&#x8AAA;</li>
+<li>&#x795E;&#x8A71;</li>
+</ul>
+</li>
+<li>&#x5370;&#x5EA6;<ul>
+<li>&#x5947;&#x5E7B;</li>
+<li>&#x9A5A;&#x609A;</li>
+<li>&#x50B3;&#x8AAA;</li>
+<li>&#x795E;&#x8A71;</li>
+</ul>
+</li>
+<li>etc...</li>
+</ul>
+<p>&#x5982;&#x679C;&#x6211;&#x5011;&#x8981;&#x627E;<code>&#x53F0;&#x7063;</code>&#x4E14;&#x985E;&#x578B;&#x70BA;<code>&#x50B3;&#x8AAA;</code>&#x7684;&#x7AE5;&#x8A71;&#x6545;&#x4E8B;&#xFF0C;&#x6211;&#x5011;&#x7684;&#x76EE;&#x5149;&#x6703;&#x5148;&#x79FB;&#x52D5;&#x5230;&#x53F0;&#x7063;&#x7684;&#x5340;&#x6BB5;&#xFF0C;&#x7136;&#x5F8C;&#x5728;&#x9019;&#x500B;&#x5340;&#x584A;&#x4E0B;&#x627E;&#x5230;&#x985E;&#x578B;&#x70BA;<code>&#x50B3;&#x8AAA;</code>&#x7684;&#x6545;&#x4E8B;</p>
+<ul>
+<li>&#x53F0;&#x7063;<ul>
+<li>&#x5947;&#x5E7B;</li>
+<li>&#x9A5A;&#x609A;</li>
+<li><strong><em>&#x50B3;&#x8AAA;</em></strong></li>
+<li>&#x795E;&#x8A71;</li>
+</ul>
+</li>
+</ul>
+<p>&#x4F46;&#x662F;&#x5982;&#x679C;&#x6211;&#x5011;&#x8981;&#x627E;&#x6240;&#x6709;&#x985E;&#x578B;&#x70BA;<code>&#x50B3;&#x8AAA;</code>&#x7684;&#x6545;&#x4E8B;&#x4E2D;&#xFF0C;&#x767C;&#x751F;&#x5728;<code>&#x53F0;&#x7063;</code>&#x7684;&#x6545;&#x4E8B;&#xFF0C;&#x4F9D;&#x7167;&#x6B65;&#x9A5F;&#x6211;&#x5011;&#x6703;&#x5E0C;&#x671B;&#x5148;&#x628A;&#x6240;&#x6709;<code>&#x50B3;&#x8AAA;</code>&#x7684;&#x6545;&#x4E8B;&#x5148;&#x5217;&#x51FA;&#x4F86;&#xFF0C;&#x518D;&#x5F9E;&#x9019;&#x500B;&#x76EE;&#x9304;&#x4E0B;&#x53BB;&#x627E;&#x5C6C;&#x65BC;<code>&#x53F0;&#x7063;</code>&#x7684;&#x6545;&#x4E8B;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x5011;&#x5E0C;&#x671B;&#x6703;&#x770B;&#x5230;&#x50CF;&#x9019;&#x6A23;&#x7684;&#x76EE;&#x9304;&#xFF08;&#x7D22;&#x5F15;&#xFF09;&#xFF1A;</p>
+<ul>
+<li>&#x50B3;&#x8AAA;<ul>
+<li><strong><em>&#x53F0;&#x7063;</em></strong></li>
+<li>&#x65E5;&#x672C;</li>
+<li>&#x6B50;&#x7F8E;</li>
+<li>&#x5370;&#x5EA6;</li>
+</ul>
+</li>
+</ul>
+<p>&#x4F46;&#x662F;&#x5728;&#x9019;&#x672C;&#x6545;&#x4E8B;&#x66F8;&#x7684;&#x76EE;&#x9304;&#xFF08;&#x7D22;&#x5F15;&#xFF09;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x6C92;&#x6709;&#x770B;&#x5230;&#x9019;&#x6A23;&#x7684;&#x76EE;&#x9304;&#x7D50;&#x69CB;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x5011;&#x6C92;&#x8FA6;&#x6CD5;&#x900F;&#x904E;&#x76EE;&#x9304;&#x5FEB;&#x901F;&#x7684;&#x627E;&#x5230;&#x6211;&#x5011;&#x8981;&#x770B;&#x7684;&#x6240;&#x6709;&#x985E;&#x578B;&#x70BA;<code>&#x50B3;&#x8AAA;</code>&#x7684;&#x7AE0;&#x7BC0;&#x8CC7;&#x6599;&#xFF0C;&#x53EA;&#x597D;&#x5F9E;&#x982D;&#x5230;&#x5C3E;&#x7684;&#x53BB;&#x7FFB;&#x95B1;&#x6574;&#x672C;&#x66F8;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x5168;&#x90E8;&#x6211;&#x5011;<code>&#x50B3;&#x8AAA;</code>&#x7AE0;&#x7BC0;&#x7684;&#x6545;&#x4E8B;&#xFF0C;&#x7136;&#x5F8C;&#x518D;&#x5F9E;&#x9019;&#x4E9B;&#x627E;&#x51FA;&#x4F86;&#x7684;<code>&#x50B3;&#x8AAA;</code>&#x6545;&#x4E8B;&#x4E2D;&#xFF0C;&#x518D;&#x53BB;&#x5340;&#x5225;&#x51FA;&#x54EA;&#x4E9B;&#x70BA;<code>&#x53F0;&#x7063;</code>&#x7684;&#x6545;&#x4E8B;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x76EE;&#x9304;&#xFF08;&#x7D22;&#x5F15;&#xFF09;&#x7684;&#x898F;&#x5247;&#x5C31;&#x662F;&#x5E0C;&#x671B;&#x770B;&#x6545;&#x4E8B;&#x66F8;&#x7684;&#x4EBA;&#x8981;&#x600E;&#x9EBC;&#x5FEB;&#x901F;&#x627E;&#x5230;&#x4ED6;&#x60F3;&#x8981;&#x7684;&#x6771;&#x897F;&#xFF0C;&#x7576;&#x6C92;&#x6709;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x53C3;&#x8003;&#x7684;&#x76EE;&#x9304;&#x7684;&#x8A71;&#xFF0C;&#x5C31;&#x50CF;&#x8CC7;&#x6599;&#x5EAB;&#x6C92;&#x6709;&#x53EF;&#x53C3;&#x8003;&#x7684;&#x7D22;&#x5F15;&#x4E00;&#x6A23;&#xFF0C;&#x5C31;&#x6703;&#x627E;&#x5F97;&#x6BD4;&#x8F03;&#x6162;&#xFF08;&#x4F46;&#x9084;&#x662F;&#x627E;&#x5F97;&#x51FA;&#x4F86;&#xFF09;&#x3002;</p>
+<h3 id="%E7%B5%90%E8%AB%96">&#x7D50;&#x8AD6;</h3>
+<p>&#x56E0;&#x70BA;&#x7D22;&#x5F15;&#x9806;&#x5E8F;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x4EE5;&#x53CA; SQL WHERE &#x689D;&#x4EF6;&#x9806;&#x5E8F;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x6703;&#x4F7F;&#x5F97;&#x8CC7;&#x6599;&#x5EAB;&#x5728;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x9032;&#x884C;&#x67E5;&#x8A62;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6548;&#x7387;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x8B39;&#x614E;&#x7684;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x53CA; SQL &#x8A9E;&#x6CD5;&#xFF0C;&#x624D;&#x80FD;&#x9054;&#x5230;&#x9AD8;&#x6548;&#x7387;&#x7684;&#x67E5;&#x8A62;&#x7D50;&#x679C;&#x3002;</p>
+<h2 id="%E6%8E%A7%E5%88%B6%E7%B4%A2%E5%BC%95%E6%9B%B4%E6%96%B0">&#x63A7;&#x5236;&#x7D22;&#x5F15;&#x66F4;&#x65B0;</h2>
+<h3 id="%E9%97%9C%E9%96%89%E7%B4%A2%E5%BC%95%E6%9B%B4%E6%96%B0%EF%BC%9A">&#x95DC;&#x9589;&#x7D22;&#x5F15;&#x66F4;&#x65B0;&#xFF1A;</h3>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> table_name DISABLE KEYS;</span>
+</code></pre>
+<h3 id="%E9%96%8B%E5%95%9F%E7%B4%A2%E5%BC%95%E6%9B%B4%E6%96%B0%EF%BC%9A">&#x958B;&#x555F;&#x7D22;&#x5F15;&#x66F4;&#x65B0;&#xFF1A;</h3>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> table_name ENABLE KEYS;</span>
+</code></pre>
+<p>MySQL&#x5728;&#x65B0;&#x589E;&#xFF08;INSERT&#xFF09;&#x3001;&#x522A;&#x9664;&#xFF08;DELETE&#xFF09;&#x3001;&#x66F4;&#x65B0;&#xFF08;UPDATE&#xFF09;&#x7684;&#x6642;&#x5019;&#x6703;&#x53BB;&#x66F4;&#x65B0;&#x73FE;&#x6709;&#x7684;&#x7D22;&#x5F15;&#x8868;&#xFF0C;&#x800C;&#x66F4;&#x65B0;&#x7D22;&#x5F15;&#x8868;&#x4E5F;&#x9700;&#x8981;&#x82B1;&#x8CBB;&#x4E00;&#x4E9B;&#x6642;&#x9593;&#xFF0C;&#x7576;&#x7570;&#x52D5;&#x4E00;&#x7B46;&#x8CC7;&#x6599;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x7D22;&#x5F15;&#x8868;&#x4E5F;&#x505A;&#x4E00;&#x6B21;&#x7684;&#x7570;&#x52D5;&#xFF0C;&#x4F46;&#x7576;&#x5728;&#x505A;&#x5927;&#x91CF;&#x8CC7;&#x6599;&#x7570;&#x52D5;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x4F8B;&#x5982;&#x7570;&#x52D5;1000&#x7B46;&#x8CC7;&#x6599;&#xFF0C;&#x7D22;&#x5F15;&#x8868;&#x4E5F;&#x9700;&#x8981;&#x7570;&#x52D5;1000&#x6B21;&#xFF0C;&#x800C;&#x5176;&#x5BE6;&#x6211;&#x5011;&#x53EA;&#x9700;&#x8981;&#x6700;&#x5F8C;&#x4E00;&#x6B21;&#xFF08;&#x6700;&#x65B0;&#xFF09;&#x7684;&#x7570;&#x52D5;&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x524D;&#x9762;&#x7684;999&#x6B21;&#x90FD;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x505A;&#x7684;&#x7D22;&#x5F15;&#x8868;&#x7570;&#x52D5;&#x66F4;&#x65B0;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x7570;&#x52D5;&#x5927;&#x91CF;&#x8CC7;&#x6599;&#x524D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6307;&#x4EE4; <code>ALTER TABLE table_name DISABLE KEYS;</code> &#x95DC;&#x9589;&#x7D22;&#x5F15;&#x66F4;&#x65B0;&#xFF0C;&#x7B49;&#x7570;&#x52D5;&#x5B8C;&#x6210;&#x5F8C;&#xFF0C;&#x518D;&#x4F7F;&#x7528;&#x6307;&#x4EE4; <code>ALTER TABLE table_name ENABLE KEYS;</code> &#x958B;&#x555F;&#x7D22;&#x5F15;&#x66F4;&#x65B0;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> users DISABLE KEYS;</span>
+&#x7570;&#x52D5;&#xFF08;<span class="hljs-operator"><span class="hljs-keyword">INSERT</span>&#x3001;<span class="hljs-keyword">DELETE</span>&#x3001;<span class="hljs-keyword">UPDATE</span>&#xFF09;&#x5927;&#x91CF;&#x8CC7;&#x6599;<span class="hljs-keyword">SQL</span>&#x8A9E;&#x6CD5;
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> users ENABLE KEYS;</span>
+</code></pre>
+<h2 id="%E8%87%AA%E5%AE%9A%E7%BE%A9hash-index%E5%81%9A%E5%AD%97%E4%B8%B2%E5%AE%8C%E6%95%B4%E6%AF%94%E5%B0%8D">&#x81EA;&#x5B9A;&#x7FA9;Hash Index&#x505A;&#x5B57;&#x4E32;&#x5B8C;&#x6574;&#x6BD4;&#x5C0D;</h2>
+<p>&#x6211;&#x5011;&#x77E5;&#x9053;&#x5728;&#x5C0D;<code>&#x5B57;&#x4E32;&#xFF08;CHAR&#x6216;VARCHAR&#xFF09;</code>&#x53BB;&#x505A;&#x67E5;&#x627E;&#x7684;&#x6642;&#x5019;&#x6548;&#x7387;&#x6703;&#x9060;&#x6BD4;&#x5C0D;<code>&#x6574;&#x6578;&#xFF08;INT&#xFF09;</code>&#x67E5;&#x627E;&#x9084;&#x6162;&#xFF0C;&#x56E0;CRC32&#x5C0D;&#x5B57;&#x4E32;&#x505A;&#x6821;&#x9A57;&#x5F8C;&#x6703;&#x56DE;&#x50B3;<code>&#x6574;&#x6578;&#x7684;&#x6821;&#x9A57;&#x78BC;</code>&#xFF0C;&#x6211;&#x5011;&#x5728;&#x8CC7;&#x6599;&#x8868;&#x589E;&#x52A0;&#x4E00;&#x500B;&#x6574;&#x6578;&#x578B;&#x614B;&#x6B04;&#x4F4D;&#xFF0C;&#x5132;&#x5B58;&#x8981;&#x6BD4;&#x5C0D;&#x5B57;&#x4E32;&#x7684;&#x6821;&#x9A57;&#x78BC;&#x3002;</p>
+<h3 id="crc32">crc32</h3>
+<blockquote>
+<p>&#x5EFA;&#x7ACB;str &#x7684; 32 &#x4F4D;&#x8FF4;&#x5708;&#x5197;&#x4F59;&#x6821;&#x9A57;&#x78BC;&#x591A;&#x9805;&#x5F0F;&#x3002;&#x9019;&#x901A;&#x5E38;&#x7528;&#x65BC;&#x6AA2;&#x67E5;&#x50B3;&#x8F38;&#x7684;&#x8CC7;&#x6599;&#x662F;&#x5426;&#x5B8C;&#x6574;&#x3002;</p>
+<p>&#x7531;&#x65BC; PHP &#x7684;&#x6574;&#x6578;&#x662F;&#x5E36;&#x7B26;&#x865F;&#x7684;&#xFF0C;&#x8A31;&#x591A; crc32 &#x6821;&#x9A57;&#x78BC;&#x5C07;&#x8FD4;&#x56DE;&#x8CA0;&#x6574;&#x6578;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528; sprintf() &#x6216; printf() &#x7684;&#x300C;%u&#x300D;&#x683C;&#x5F0F;&#x7B26;&#x4F86;&#x53D6;&#x5F97;&#x8868;&#x793A;&#x7121;&#x7B26;&#x865F; crc32 &#x6821;&#x9A57;&#x78BC;&#x7684;&#x5B57;&#x4E32;&#x3002;
+ &#x5728;&#x539F;&#x672C;&#x5BE6;&#x4F5C;email&#x767B;&#x5165;&#x6642;&#x6703;&#x5C0D;email&#x6B04;&#x4F4D;&#x505A;&#x7D22;&#x5F15;&#xFF0C;&#x6240;&#x4EE5;&#x6703;&#x5148;&#x53BB;&#x67E5;&#x627E;email&#x5B57;&#x4E32;&#x6B04;&#x4F4D;&#x7684;&#x8CC7;&#x6599;&#xFF0C;&#x4E4B;&#x5F8C;&#x518D;&#x53BB;&#x6BD4;&#x5C0D;&#x5BC6;&#x78BC;&#x662F;&#x5426;&#x6B63;&#x78BA;&#xFF0C;&#x4F46;&#x82E5;&#x8CC7;&#x6599;&#x904E;&#x591A;&#x5B57;&#x4E32;&#x6BD4;&#x5C0D;&#x7684;&#x6548;&#x7387;&#x6703;&#x964D;&#x4F4E;&#x5F88;&#x591A;</p>
+</blockquote>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">SELECT</span> id,name,email
+<span class="hljs-keyword">FROM</span> <span class="hljs-keyword">user</span>
+<span class="hljs-keyword">WHERE</span> email = <span class="hljs-string">&quot;kejyun@gmail.com&quot;</span>
+<span class="hljs-keyword">AND</span> <span class="hljs-keyword">password</span> = <span class="hljs-string">&quot;xxx&quot;</span>
+</span></code></pre>
+<p>&#x6211;&#x5011;&#x52A0;&#x5165;&#x4E86; <code>emailcrc</code> &#x7684;&#x6B04;&#x4F4D;&#x53BB;&#x5132;&#x5B58;&#x5C0D; email &#x5B57;&#x4E32;&#x7684;&#x6821;&#x9A57;&#x78BC;&#xFF0C;&#x518D;&#x67E5;&#x627E; email &#x5B57;&#x4E32;&#x6B04;&#x4F4D;&#x7684;&#x8CC7;&#x6599;&#x524D;&#xFF0C;&#x5148;&#x900F;&#x904E;crc&#x6574;&#x6578;&#x6821;&#x9A57;&#x78BC;&#x5FEB;&#x901F;&#x904E;&#x6FFE;&#x6389;&#x4E0D;&#x53EF;&#x80FD;&#x7684;&#x8CC7;&#x6599;&#xFF0C;&#x4E4B;&#x5F8C;&#x518D;&#x5F9E;&#x5C11;&#x6578;&#x7684;&#x8CC7;&#x6599;&#x4E2D;&#x505A; email &#x5B57;&#x4E32;&#x6B04;&#x4F4D;&#x5B57;&#x4E32;&#x6BD4;&#x5C0D;&#xFF0C;&#x5982;&#x679C;&#x8CC7;&#x6599;&#x91CF;&#x5F88;&#x5927;&#xFF0C;&#x9019;&#x6A23;&#x7684;&#x6548;&#x7387;&#x6703;&#x63D0;&#x5347;&#x5F88;&#x591A;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">SELECT</span> id,name,email
+<span class="hljs-keyword">FROM</span> <span class="hljs-keyword">user</span>
+<span class="hljs-keyword">WHERE</span> emailcrc = <span class="hljs-keyword">CRC32</span>(<span class="hljs-string">&quot;kejyun@gmail.com&quot;</span>)
+<span class="hljs-keyword">AND</span> email=<span class="hljs-string">&quot;kejyun@gmail.com&quot;</span>
+<span class="hljs-keyword">AND</span> <span class="hljs-keyword">password</span>=<span class="hljs-string">&quot;xxx&quot;</span>
+</span></code></pre>
+<p>&#x9019;&#x908A;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x6C92;&#x8FA6;&#x6CD5;&#x53EA;&#x4F7F;&#x7528; crc &#x6821;&#x9A57;&#x78BC;&#x53BB;&#x7576;&#x4F5C;&#x552F;&#x4E00;&#x7684;&#x689D;&#x4EF6;&#xFF0C;<code>&#x4E0D;&#x540C;&#x7684;&#x5B57;&#x4E32;&#x53EF;&#x80FD;&#x6703;&#x51FA;&#x73FE;&#x76F8;&#x540C;&#x7684;&#x6821;&#x9A57;&#x78BC;</code>&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x5F8C;&#x9084;&#x662F;&#x8981;&#x5C0D;&#x4F60;&#x8981;&#x6BD4;&#x5C0D;&#x7684;&#x5B57;&#x4E32;&#x505A;&#x6BD4;&#x5C0D;&#xFF0C;&#x907F;&#x514D;&#x67E5;&#x8A62;&#x767C;&#x751F;&#x932F;&#x8AA4;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>email</th>
+<th style="text-align:center">emailcrc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kejyun1@gmail.com</td>
+<td style="text-align:center">1234567890</td>
+</tr>
+<tr>
+<td>kejyun2@gmail.com</td>
+<td style="text-align:center">1234567890</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">&#x53C3;&#x8003;&#x8CC7;&#x6599;</h2>
+<ul>
+<li><a href="http://blog.kejyun.com/2012/12/Tips-For-Use-MySQL-With-High-Performance.html" target="_blank">KeJyun&#x5B78;&#x7FD2;&#x65E5;&#x8A8C;: &#x63D0;&#x9AD8;&#x5B58;&#x53D6;MySQL&#x6548;&#x7387;&#x5C0F;&#x6280;&#x5DE7;</a></li>
+<li><a href="http://blog.kejyun.com/2012/12/MySQL-Efficiency-Adjustment.html" target="_blank">KeJyun&#x5B78;&#x7FD2;&#x65E5;&#x8A8C;: MySQL&#x6548;&#x7387;&#x8ABF;&#x6821;</a></li>
+<li><a href="http://www.percona.com/files/presentations/WEBINAR-MySQL-Indexing-Best-Practices.pdf" target="_blank">MySQL Indexing: Best Practices Slide PDF</a></li>
+<li><a href="http://www.percona.com/files/presentations/WEBINAR-tools-and-techniques-for-index-design.pdf" target="_blank">Tools and Techniques for Index Design PDF Slide</a></li>
+<li><a href="http://www.percona.com/files/presentations/WEBINAR2012-02-Explain-Demystified.pdf" target="_blank">EXPLAIN Demystified PDF slide</a></li>
+<li><a href="http://www.percona.com/files/presentations/percona-live/london-2012/PLUK2012-optimizing-mysql-configuration.pdf" target="_blank">Optimizing MySQL Configuration PDF Slide</a></li>
+<li><a href="http://por.tw/Website_Design/PHP5/function.crc32.html" target="_blank">PHP&#x624B;&#x518A; - crc32</a></li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../Database/Database-MySQL-Code-SQL.html" class="navigation navigation-prev " aria-label="Previous page: 程式語法"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../Database/Database-MySQL-Lock-Table.html" class="navigation navigation-next " aria-label="Next page: 鎖表"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"disqus":{"shortName":"kejyun-high-scaling-websites-structure"},"ga":{"token":"UA-31063691-11","configuration":"auto"}};
+    gitbook.start(config);
+});
+</script>
+
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-31063691-11', 'auto');ga('send', 'pageview');</script>
+    </body>
+    
+</html>

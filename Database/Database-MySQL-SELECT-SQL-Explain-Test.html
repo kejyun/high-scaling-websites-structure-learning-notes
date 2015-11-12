@@ -1,0 +1,938 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>SELECT 語法效能測試 | High Scaling Websites Structure Learning Notes 大型網站架構學習筆記</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../Code/Code-README.html" />
+    
+    
+    <link rel="prev" href="../Database/Database-MySQL-Server.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="2.2.7" data-basepath=".." data-revision="Fri Nov 13 2015 06:50:15 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        介紹
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="High-Scaling-Websites-Structure-Concept.html">
+            
+                
+                    <a href="../High-Scaling-Websites-Structure-Concept.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        概念
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="Database/Database-README.html">
+            
+                
+                    <a href="../Database/Database-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        資料庫
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="Database/Database-Data-Permutations.html">
+            
+                
+                    <a href="../Database/Database-Data-Permutations.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        資料排列組合
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Database/Database-MySQL-README.html">
+            
+                
+                    <a href="../Database/Database-MySQL-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        MySQL
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="Database/Database-MySQL-DataType.html">
+            
+                
+                    <a href="../Database/Database-MySQL-DataType.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        資料類型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="Database/Database-MySQL-Code-SQL.html">
+            
+                
+                    <a href="../Database/Database-MySQL-Code-SQL.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.2.</b>
+                        
+                        程式語法
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="Database/Database-MySQL-Index.html">
+            
+                
+                    <a href="../Database/Database-MySQL-Index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        索引
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="Database/Database-MySQL-Lock-Table.html">
+            
+                
+                    <a href="../Database/Database-MySQL-Lock-Table.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.4.</b>
+                        
+                        鎖表
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="Database/Database-MySQL-Transaction.html">
+            
+                
+                    <a href="../Database/Database-MySQL-Transaction.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.5.</b>
+                        
+                        交易
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="Database/Database-MySQL-Server.html">
+            
+                
+                    <a href="../Database/Database-MySQL-Server.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.6.</b>
+                        
+                        伺服器
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.7" data-path="Database/Database-MySQL-SELECT-SQL-Explain-Test.html">
+            
+                
+                    <a href="../Database/Database-MySQL-SELECT-SQL-Explain-Test.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.7.</b>
+                        
+                        SELECT 語法效能測試
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Code/Code-README.html">
+            
+                
+                    <a href="../Code/Code-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        程式
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="Code/Code-Array.html">
+            
+                
+                    <a href="../Code/Code-Array.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        陣列
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="Cache/Cache-README.html">
+            
+                
+                    <a href="../Cache/Cache-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        快取
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="Cache/Cache-Set-Cache.html">
+            
+                
+                    <a href="../Cache/Cache-Set-Cache.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        設定
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="Cache/Cache-Delete-Cache.html">
+            
+                
+                    <a href="../Cache/Cache-Delete-Cache.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        刪除
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="File/File-README.html">
+            
+                
+                    <a href="../File/File-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        檔案
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="Architecture-Evolution/Architecture-Evolution-README.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        網站架構演進
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="Architecture-Evolution/Architecture-Evolution-All-Together.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-All-Together.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Web 與 Database 在一起
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="Architecture-Evolution/Architecture-Evolution-Break-Up.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Break-Up.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Web 與 Database 分手
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="Architecture-Evolution/Architecture-Evolution-Static-Page-Cache.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Static-Page-Cache.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        前端靜態頁面暫存
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="Architecture-Evolution/Architecture-Evolution-Partial-Page-Cache.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Partial-Page-Cache.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        頁面片段暫存
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="Architecture-Evolution/Architecture-Evolution-Dynamic-Data-Cache.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Dynamic-Data-Cache.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        動態資料快取
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="Architecture-Evolution/Architecture-Evolution-Add-Web-Server.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Add-Web-Server.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        增加 Web Server
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="Architecture-Evolution/Architecture-Evolution-Add-Database-Server.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Add-Database-Server.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        增加 Database Server
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="Architecture-Evolution/Architecture-Evolution-Data-Distribute.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Data-Distribute.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        分散式資料
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="Architecture-Evolution/Architecture-Evolution-Add-More-Web-Server.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Add-More-Web-Server.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.</b>
+                        
+                        增加更多的 Web Server
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.10" data-path="Architecture-Evolution/Architecture-Evolution-Set-Database-Read-Write-Server.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-Set-Database-Read-Write-Server.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.10.</b>
+                        
+                        Database 讀寫分離
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.11" data-path="Architecture-Evolution/Architecture-Evolution-High-Useability-Service-Structure.html">
+            
+                
+                    <a href="../Architecture-Evolution/Architecture-Evolution-High-Useability-Service-Structure.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.11.</b>
+                        
+                        高可用性的服務架構
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="Question/Question-README.html">
+            
+                
+                    <a href="../Question/Question-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        常見問題
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="Question/Question-Benchmark.html">
+            
+                
+                    <a href="../Question/Question-Benchmark.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        壓力測試
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="Reference/Reference-README.html">
+            
+                
+                    <a href="../Reference/Reference-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        參考資料
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="Reference/Reference-Books.html">
+            
+                
+                    <a href="../Reference/Reference-Books.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        書籍
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Reference/Reference-Article.html">
+            
+                
+                    <a href="../Reference/Reference-Article.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        文章
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Reference/Reference-Tool.html">
+            
+                
+                    <a href="../Reference/Reference-Tool.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        工具
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >High Scaling Websites Structure Learning Notes 大型網站架構學習筆記</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="explain-%E5%81%9A-sql-select-%E8%AA%9E%E6%B3%95%E6%95%88%E8%83%BD%E6%B8%AC%E8%A9%A6">Explain &#x505A; SQL SELECT &#x8A9E;&#x6CD5;&#x6548;&#x80FD;&#x6E2C;&#x8A66;</h1>
+<p>&#x5728;MySQL&#x6211;&#x5011;&#x5728;&#x4F7F;&#x7528; SELECT &#x505A;&#x6488;&#x53D6;&#x8CC7;&#x6599;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x6709;&#x6642;&#x5019;&#x5E38;&#x5E38;&#x6703;&#x6548;&#x80FD;&#x4F4E;&#x843D;&#xFF0C;&#x6488;&#x53D6;&#x8CC7;&#x6599;&#x9700;&#x8981;&#x5F88;&#x9577;&#x7684;&#x6642;&#x9593;&#xFF0C;&#x6709;&#x6642;&#x5019;&#x662F; SQL &#x8A9E;&#x6CD5;&#x4E0B;&#x5F97;&#x4E0D;&#x597D;&#x5C0E;&#x81F4;&#x6C92;&#x6709;&#x4F7F;&#x7528;&#x5230;&#x6B63;&#x78BA;&#x7684;&#x7D22;&#x5F15;&#x53BB;&#x6488;&#x8CC7;&#x6599;&#xFF0C;&#x6211;&#x5011;&#x9019;&#x500B;&#x6642;&#x5019;&#x5C31;&#x5FC5;&#x9808;&#x8981;&#x6AA2;&#x67E5;&#x6211;&#x5011;&#x4E0B;&#x7684; SQL &#x8A9E;&#x6CD5;&#x5230;&#x5E95;&#x6709;&#x54EA;&#x4E9B;&#x5730;&#x65B9;&#x9700;&#x8981;&#x6539;&#x5584;&#xFF0C;&#x6211;&#x5EFA;&#x7ACB;&#x7684; comment &#x7684;&#x8CC7;&#x6599;&#x8868;&#x4E26;&#x65B0;&#x589E;&#x5E7E;&#x7B46;&#x5047;&#x8CC7;&#x6599;&#x53BB;&#x505A;&#x793A;&#x7BC4;</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- &#x5EFA;&#x7ACB;&#x8CC7;&#x6599;&#x8868;</span>
+
+<span class="hljs-comment">-- &#x7559;&#x8A00;</span>
+<span class="hljs-operator"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> <span class="hljs-string">`comment`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>) unsigned <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT COMMENT <span class="hljs-string">&apos;&#x7DE8;&#x865F;&apos;</span>,
+  <span class="hljs-string">`content`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">50</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> COMMENT <span class="hljs-string">&apos;&#x7559;&#x8A00;&apos;</span>,
+  <span class="hljs-keyword">PRIMARY</span> <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span>  <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COLLATE</span>=utf8_unicode_ci AUTO_INCREMENT=<span class="hljs-number">1</span> ;</span>
+
+<span class="hljs-comment">-- &#x4F7F;&#x7528;&#x8005;</span>
+<span class="hljs-operator"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> <span class="hljs-string">`user`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>) unsigned <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT COMMENT <span class="hljs-string">&apos;&#x7DE8;&#x865F;&apos;</span>,
+  <span class="hljs-string">`name`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">30</span>) <span class="hljs-keyword">COLLATE</span> utf8_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> COMMENT <span class="hljs-string">&apos;&#x59D3;&#x540D;&apos;</span>,
+  <span class="hljs-keyword">PRIMARY</span> <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span>  <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COLLATE</span>=utf8_unicode_ci AUTO_INCREMENT=<span class="hljs-number">3</span> ;</span>
+
+<span class="hljs-comment">-- &#x4F7F;&#x7528;&#x8005;&#x7684;&#x7559;&#x8A00;</span>
+<span class="hljs-operator"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> <span class="hljs-string">`user_comment`</span> (
+  <span class="hljs-string">`user_id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>) unsigned <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> COMMENT <span class="hljs-string">&apos;&#x4F7F;&#x7528;&#x8005;&#x7DE8;&#x865F;&apos;</span>,
+  <span class="hljs-string">`comment_id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>) unsigned <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> COMMENT <span class="hljs-string">&apos;&#x8A55;&#x8AD6;&#x7DE8;&#x865F;&apos;</span>,
+  <span class="hljs-keyword">PRIMARY</span> <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`user_id`</span>,<span class="hljs-string">`comment_id`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COLLATE</span>=utf8_unicode_ci;</span>
+
+
+
+<span class="hljs-comment">-- &#x65B0;&#x589E;&#x8CC7;&#x6599;</span>
+
+<span class="hljs-comment">-- &#x7559;&#x8A00;</span>
+<span class="hljs-operator"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`comment`</span> (<span class="hljs-string">`id`</span>, <span class="hljs-string">`content`</span>) <span class="hljs-keyword">VALUES</span>
+(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;&#x7559;&#x8A00;1&apos;</span>),
+(<span class="hljs-number">2</span>, <span class="hljs-string">&apos;&#x7559;&#x8A00;2&apos;</span>);</span>
+
+<span class="hljs-comment">-- &#x4F7F;&#x7528;&#x8005;</span>
+<span class="hljs-operator"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`user`</span> (<span class="hljs-string">`id`</span>, <span class="hljs-string">`name`</span>) <span class="hljs-keyword">VALUES</span>
+(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;&#x4F7F;&#x7528;&#x8005;1&apos;</span>),
+(<span class="hljs-number">2</span>, <span class="hljs-string">&apos;&#x4F7F;&#x7528;&#x8005;2&apos;</span>);</span>
+
+<span class="hljs-comment">-- &#x4F7F;&#x7528;&#x8005;&#x7684;&#x7559;&#x8A00;</span>
+<span class="hljs-operator"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`user_comment`</span> (<span class="hljs-string">`user_id`</span>, <span class="hljs-string">`comment_id`</span>) <span class="hljs-keyword">VALUES</span>
+(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>),
+(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);</span>
+
+
+
+
+<span class="hljs-comment">-- &#x89E3;&#x91CB;MySQL&#x8A9E;&#x6CD5;&#x6548;&#x80FD;</span>
+
+<span class="hljs-comment">-- &#x6488;&#x53D6;&#x7559;&#x8A00;&#x8CC7;&#x6599;</span>
+<span class="hljs-operator"><span class="hljs-keyword">EXPLAIN</span> <span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span>  <span class="hljs-string">`comment`</span> <span class="hljs-keyword">WHERE</span>  id<span class="hljs-string">` =2;
+
+-- &#x6488;&#x53D6;&#x4F7F;&#x7528;&#x8005;&#x7684;&#x7559;&#x8A00;&#x8CC7;&#x6599;
+EXPLAIN SELECT *
+FROM  `</span>comment<span class="hljs-string">` c,  `</span><span class="hljs-keyword">user</span><span class="hljs-string">` u,  `</span>user_comment<span class="hljs-string">` uc
+WHERE u.`</span>id<span class="hljs-string">` = uc.`</span>user_id<span class="hljs-string">`
+AND uc.`</span>comment_id<span class="hljs-string">` = c.`</span>id<span class="hljs-string">`
+</span></span></code></pre>
+<h2 id="%E8%A7%A3%E9%87%8B-mysql-%E8%AA%9E%E6%B3%95%E6%95%88%E8%83%BD%EF%BC%9A%E6%92%88%E5%8F%96%E7%95%99%E8%A8%80%E8%B3%87%E6%96%99">&#x89E3;&#x91CB; MySQL &#x8A9E;&#x6CD5;&#x6548;&#x80FD;&#xFF1A;&#x6488;&#x53D6;&#x7559;&#x8A00;&#x8CC7;&#x6599;</h2>
+<p><img src="http://3.bp.blogspot.com/-YagV7ODyhPI/UNLeKtvO_uI/AAAAAAAAC8k/v4NrdlhZnCo/s1600/2012-12-20_174153.png" alt="Explain MySQL SQL"></p>
+<h2 id="%E8%A7%A3%E9%87%8Bmysql%E8%AA%9E%E6%B3%95%E6%95%88%E8%83%BD%EF%BC%9A%E6%92%88%E5%8F%96%E7%95%99%E8%A8%80%E8%B3%87%E6%96%99">&#x89E3;&#x91CB;MySQL&#x8A9E;&#x6CD5;&#x6548;&#x80FD;&#xFF1A;&#x6488;&#x53D6;&#x7559;&#x8A00;&#x8CC7;&#x6599;</h2>
+<p><img src="http://4.bp.blogspot.com/-7EtC6Ep0cbY/UNLjeYCIEPI/AAAAAAAAC88/chZ1hCB5rrs/s1600/2012-12-20_180223.png" alt="&#x89E3;&#x91CB;MySQL&#x8A9E;&#x6CD5;&#x6548;&#x80FD;&#xFF1A;&#x6488;&#x53D6;&#x7559;&#x8A00;&#x8CC7;&#x6599;"></p>
+<p>&#x800C;EXPLAIN&#x5F8C;&#x7684;&#x8CC7;&#x6599;&#x6709;&#x4E0B;&#x9762;&#x9019;&#x4E9B;&#x6B04;&#x4F4D;</p>
+<h3 id="select-type">select_type</h3>
+<h3 id="table">table</h3>
+<p>&#x95DC;&#x9023;&#x5230;&#x7684;&#x8CC7;&#x6599;&#x8868;</p>
+<h3 id="type">type</h3>
+<p>&#x4F7F;&#x7528;&#x95DC;&#x806F;&#x67E5;&#x8A62;&#x7684;&#x985E;&#x578B;(&#x6548;&#x7387;&#x7531;&#x597D;&#x81F3;&#x58DE;&#x6392;&#x5E8F;)</p>
+<ul>
+<li>System</li>
+<li>const</li>
+<li>eq_ref</li>
+<li>ref</li>
+<li>fulltext</li>
+<li>ref_or_null</li>
+<li>index_merge</li>
+<li>unique_subquery</li>
+<li>index_subquery</li>
+<li>range</li>
+<li>index</li>
+<li>ALL</li>
+</ul>
+<h3 id="possible-keys">possible_keys</h3>
+<p>&#x53EF;&#x80FD;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5F9E;WHERE&#x8A9E;&#x6CD5;&#x9078;&#x64C7;&#x51FA;&#x4E00;&#x500B;&#x9069;&#x5408;&#x7684;&#x6B04;&#x4F4D;</p>
+<h3 id="key">key</h3>
+<p>&#x5BE6;&#x969B;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5982;&#x679C;&#x70BA;NULL&#xFF0C;&#x5247;&#x662F;&#x6C92;&#x6709;&#x4F7F;&#x7528;&#x7D22;&#x5F15;</p>
+<h3 id="key-len">key_len</h3>
+<p>&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x7684;&#x9577;&#x5EA6;&#xFF0C;&#x9577;&#x5EA6;&#x8D8A;&#x77ED; &#x6E96;&#x78BA;&#x6027;&#x8D8A;&#x9AD8;</p>
+<h3 id="ref">ref</h3>
+<p>&#x986F;&#x793A;&#x90A3;&#x4E00;&#x5217;&#x7684;&#x7D22;&#x5F15;&#x88AB;&#x4F7F;&#x7528;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x4E00;&#x500B;&#x5E38;&#x6578;(const)</p>
+<h3 id="rows">rows</h3>
+<p>MySQL&#x7528;&#x4F86;&#x8FD4;&#x56DE;&#x8CC7;&#x6599;&#x7684;&#x7B46;&#x6578;&#xFF0C;&#x53EF;&#x4EE5;&#x7C21;&#x55AE;&#x7684;&#x628A;rows&#x8996;&#x70BA;&#x57F7;&#x884C;&#x6548;&#x80FD;&#xFF0C;&#x8D8A;&#x5C11;&#x8D8A;&#x597D;</p>
+<h3 id="extra">Extra</h3>
+<p>MySQL&#x7528;&#x4F86;&#x89E3;&#x6790;&#x984D;&#x5916;&#x7684;&#x67E5;&#x8A62;&#x8A0A;&#x606F;</p>
+<ul>
+<li>Distinct</li>
+</ul>
+<p>&#x7576;MySQL&#x627E;&#x5230;&#x76F8;&#x95DC;&#x9023;&#x7684;&#x8CC7;&#x6599;&#x6642;&#xFF0C;&#x5C31;&#x4E0D;&#x518D;&#x641C;&#x5C0B;&#x3002;</p>
+<ul>
+<li>Not exists</li>
+</ul>
+<p>MySQL&#x512A;&#x5316; LEFT JOIN&#xFF0C;&#x4E00;&#x65E6;&#x627E;&#x5230;&#x7B26;&#x5408;&#x7684;LEFT JOIN&#x8CC7;&#x6599;&#x5F8C;&#xFF0C;&#x5C31;&#x4E0D;&#x518D;&#x641C;&#x5C0B;&#x3002;</p>
+<ul>
+<li>Range checked for each Record(index map:#)</li>
+</ul>
+<p>&#x7121;&#x6CD5;&#x627E;&#x5230;&#x7406;&#x60F3;&#x7684;&#x7D22;&#x5F15;&#x3002;&#x6B64;&#x70BA;&#x6700;&#x6162;&#x7684;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x3002;</p>
+<ul>
+<li>Using filesort</li>
+</ul>
+<p>&#x7576;&#x51FA;&#x73FE;&#x9019;&#x500B;&#x503C;&#x6642;&#xFF0C;&#x8868;&#x793A;&#x6B64;SELECT&#x8A9E;&#x6CD5;&#x9700;&#x8981;&#x512A;&#x5316;&#x3002;&#x56E0;&#x70BA;MySQL&#x5FC5;&#x9808;&#x9032;&#x884C;&#x984D;&#x5916;&#x7684;&#x6B65;&#x9A5F;&#x4F86;&#x9032;&#x884C;&#x67E5;&#x8A62;&#x3002;</p>
+<ul>
+<li>Using index</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x8CC7;&#x6599;&#x662F;&#x5F9E;&#x7D22;&#x5F15;&#x4E2D;&#x8CC7;&#x6599;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5F9E;&#x5BE6;&#x969B;&#x7684;&#x8CC7;&#x6599;&#x4E2D;&#x8FD4;&#x56DE;&#xFF0C;&#x7576;&#x8FD4;&#x56DE;&#x7684;&#x8CC7;&#x6599;&#x90FD;&#x51FA;&#x73FE;&#x5728;&#x7D22;&#x5F15;&#x4E2D;&#x7684;&#x8CC7;&#x6599;&#x6642;&#x5C31;&#x6703;&#x767C;&#x751F;&#x6B64;&#x60C5;&#x6CC1;&#x3002;</p>
+<ul>
+<li>Using temporary</li>
+</ul>
+<p>&#x540C;Using filesort&#xFF0C;&#x8868;&#x793A;&#x6B64;SELECT&#x8A9E;&#x6CD5;&#x9700;&#x8981;&#x9032;&#x884C;&#x512A;&#x5316;&#x3002;&#x6B64;&#x70BA;MySQL&#x5FC5;&#x9808;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x66AB;&#x6642;&#x7684;&#x8CC7;&#x6599;&#x8868;(Table)&#x4F86;&#x5132;&#x5B58;&#x7D50;&#x679C;&#xFF0C;&#x6B64;&#x60C5;&#x6CC1;&#x6703;&#x767C;&#x751F;&#x5728;&#x91DD;&#x5C0D;&#x4E0D;&#x540C;&#x7684;&#x8CC7;&#x6599;&#x9032;&#x884C;ORDER BY&#xFF0C;&#x800C;&#x4E0D;&#x662F;GROUP BY&#x3002;</p>
+<ul>
+<li>Using where</li>
+</ul>
+<p>&#x4F7F;&#x7528;WHERE&#x8A9E;&#x6CD5;&#x4E2D;&#x7684;&#x6B04;&#x4F4D;&#x4F86;&#x8FD4;&#x56DE;&#x7D50;&#x679C;&#x3002;</p>
+<ul>
+<li>System</li>
+</ul>
+<p>system&#x8CC7;&#x6599;&#x8868;&#xFF0C;&#x6B64;&#x70BA;const&#x9023;&#x63A5;&#x985E;&#x578B;&#x7684;&#x7279;&#x6B8A;&#x60C5;&#x6CC1;&#x3002;</p>
+<ul>
+<li>Const</li>
+</ul>
+<p>&#x8CC7;&#x6599;&#x8868;&#x4E2D;&#x7684;&#x4E00;&#x500B;&#x8A18;&#x9304;&#x7684;&#x6700;&#x5927;&#x503C;&#x80FD;&#x5920;&#x7B26;&#x5408;&#x9019;&#x500B;&#x67E5;&#x8A62;&#x3002;&#x56E0;&#x70BA;&#x53EA;&#x6709;&#x4E00;&#x884C;&#xFF0C;&#x9019;&#x500B;&#x503C;&#x5C31;&#x662F;&#x5E38;&#x6578;&#xFF0C;&#x56E0;&#x70BA;MySQL&#x6703;&#x5148;&#x8B80;&#x9019;&#x500B;&#x503C;&#x7136;&#x5F8C;&#x628A;&#x5B83;&#x7576;&#x505A;&#x5E38;&#x6578;&#x3002;</p>
+<ul>
+<li>eq_ref</li>
+</ul>
+<p>MySQL&#x5728;&#x9023;&#x63A5;&#x67E5;&#x8A62;&#x6642;&#xFF0C;&#x6703;&#x5F9E;&#x6700;&#x524D;&#x9762;&#x7684;&#x8CC7;&#x6599;&#x8868;&#xFF0C;&#x5C0D;&#x6BCF;&#x4E00;&#x500B;&#x8A18;&#x9304;&#x7684;&#x806F;&#x5408;&#xFF0C;&#x5F9E;&#x8CC7;&#x6599;&#x8868;&#x4E2D;&#x8B80;&#x53D6;&#x4E00;&#x500B;&#x8A18;&#x9304;&#xFF0C;&#x5728;&#x67E5;&#x8A62;&#x6642;&#x6703;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x70BA;&#x4E3B;&#x9375;&#x6216;&#x552F;&#x4E00;&#x9375;&#x7684;&#x5168;&#x90E8;&#x3002;</p>
+<ul>
+<li>ref</li>
+</ul>
+<p>&#x53EA;&#x6709;&#x5728;&#x67E5;&#x8A62;&#x4F7F;&#x7528;&#x4E86;&#x975E;&#x552F;&#x4E00;&#x9375;&#x6216;&#x4E3B;&#x9375;&#x6642;&#x624D;&#x6703;&#x767C;&#x751F;&#x3002;</p>
+<ul>
+<li>range</li>
+</ul>
+<p>&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x8FD4;&#x56DE;&#x4E00;&#x500B;&#x7BC4;&#x570D;&#x7684;&#x7D50;&#x679C;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x4F7F;&#x7528;&#x5927;&#x65BC;&gt;&#x6216;&#x5C0F;&#x65BC;&lt;&#x67E5;&#x8A62;&#x6642;&#x767C;&#x751F;&#x3002;</p>
+<ul>
+<li>index</li>
+</ul>
+<p>&#x6B64;&#x70BA;&#x91DD;&#x5C0D;&#x7D22;&#x5F15;&#x4E2D;&#x7684;&#x8CC7;&#x6599;&#x9032;&#x884C;&#x67E5;&#x8A62;&#x3002;</p>
+<ul>
+<li>ALL</li>
+</ul>
+<p>&#x91DD;&#x5C0D;&#x6BCF;&#x4E00;&#x7B46;&#x8A18;&#x9304;&#x9032;&#x884C;&#x5B8C;&#x5168;&#x6383;&#x63CF;&#xFF0C;&#x6B64;&#x70BA;&#x6700;&#x58DE;&#x7684;&#x60C5;&#x6CC1;&#xFF0C;&#x61C9;&#x8A72;&#x76E1;&#x91CF;&#x907F;&#x514D;&#x3002;</p>
+<h2 id="%E7%B5%90%E8%AB%96">&#x7D50;&#x8AD6;</h2>
+<p>MySQL &#x7684; Explain &#x53EF;&#x4EE5;&#x5206;&#x6790;&#x5927;&#x90E8;&#x4EFD;&#x7684; SQL &#x8A9E;&#x6CD5;&#x6548;&#x80FD;&#xFF0C;&#x4F46;&#x6709;&#x4E9B;&#x8A9E;&#x6CD5;&#x50CF;&#x662F; WHERE IN &#x5247;&#x6703;&#x88AB;&#x6B78;&#x985E;&#x70BA; range &#x7684;&#x8A9E;&#x6CD5;&#xFF0C;&#x4F46;&#x5BE6;&#x969B;&#x4E0A;&#x5247;&#x662F; Using Where&#xFF0C;&#x6240;&#x4EE5;&#x78BA;&#x5207;&#x7684;&#x8A9E;&#x6CD5;&#x5206;&#x6790;&#x8981;&#x518D;&#x770B;&#x770B;&#x6587;&#x4EF6;&#x771F;&#x6B63;&#x7684;&#x7528;&#x6CD5;&#x53BB;&#x6C7A;&#x5B9A;</p>
+<h2 id="%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">&#x53C3;&#x8003;&#x8CC7;&#x6599;</h2>
+<ul>
+<li><a href="http://blog.kejyun.com/2012/12/Using-EXPLAIN-SQL-To-Analysis-Efficient-On-MySQL.html" target="_blank">KeJyun&#x5B78;&#x7FD2;&#x65E5;&#x8A8C;: &#x5728;MySQL&#x4F7F;&#x7528;Explain&#x505A;SQL SELECT&#x8A9E;&#x6CD5;&#x6548;&#x80FD;&#x6E2C;&#x8A66;</a></li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../Database/Database-MySQL-Server.html" class="navigation navigation-prev " aria-label="Previous page: 伺服器"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../Code/Code-README.html" class="navigation navigation-next " aria-label="Next page: 程式"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"disqus":{"shortName":"kejyun-high-scaling-websites-structure"},"ga":{"token":"UA-31063691-11","configuration":"auto"}};
+    gitbook.start(config);
+});
+</script>
+
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-31063691-11', 'auto');ga('send', 'pageview');</script>
+    </body>
+    
+</html>
