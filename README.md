@@ -1,18 +1,26 @@
 # High Scaling Websites Structure Learning Notes 大型網站架構學習筆記
 
+## 作者 : KeJyun
+
 本書會介紹一些在建構大型網站中常用到的技巧或方法
 
-作者 : KeJyun
+### 書籍網址
 
-Blog : http://blog.kejyun.com
+| 項目  | 網址 |
+|---|---|
+|  Github Page | http://kejyun.github.io/high-scaling-websites-structure-learning-notes/  |
+|  GitBook | http://kejyuntw.gitbooks.io/high-scaling-websites-structure-learning-notes/  |
 
-Github: https://github.com/kejyun
+### 聯絡資訊
 
-Facebook : http://fb.me/kejyunTaiwan
+| 項目  | 網址 |
+|---|---|
+|  Email | kejyun@gmail.com  |
+|  LinkedIn | https://tw.linkedin.com/in/kejyun  |
+|  Github | https://github.com/kejyun  |
+|  Facebook | http://fb.me/kejyunTaiwan  |
+|  Blog | http://blog.kejyun.com  |
 
-Email : kejyun@gmail.com
-
-gitbook : http://kejyuntw.gitbooks.io/high-scaling-websites-structure-learning-notes/
 
 
 ## 所有 KeJyun 著作
