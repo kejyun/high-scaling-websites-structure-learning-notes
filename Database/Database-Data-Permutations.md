@@ -72,4 +72,5 @@
 
 ## 參考資料
 * [MySQL資料型態描述與比較](http://blog.kejyun.com/2012/09/MySQL-Field-Data-Type-Description-And-Compare.html)
+* [Store UUID in an optimized way](https://www.percona.com/blog/2014/12/19/store-uuid-optimized-way/)
 * [《江南Style》如何衝破YouTube的計數器](http://www.cw.com.tw/article/article.action?id=5063028)
