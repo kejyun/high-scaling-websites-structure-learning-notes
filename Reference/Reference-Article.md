@@ -11,3 +11,6 @@
 
 ### MySQL
 * [KeJyun學習日誌: 在MySQL中MyISAM與InnoDB資料庫引擎比較](http://blog.kejyun.com/2012/12/Compare-MyISAM-And-InnoDB-Database-Engine-In-MySQL.html)
+
+## 實際案例
+* [Stack Overflow: The Architecture - 2016 Edition](http://nickcraver.com/blog/2016/02/17/stack-overflow-the-architecture-2016-edition/)
