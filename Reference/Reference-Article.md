@@ -14,3 +14,4 @@
 
 ## 實際案例
 * [Stack Overflow: The Architecture - 2016 Edition](http://nickcraver.com/blog/2016/02/17/stack-overflow-the-architecture-2016-edition/)
+* [《英雄联盟》玩家聊天服务的持久层演进](http://bbs.gameres.com/thread_485619.html)
