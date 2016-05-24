@@ -74,3 +74,4 @@
 * [MySQL資料型態描述與比較](http://blog.kejyun.com/2012/09/MySQL-Field-Data-Type-Description-And-Compare.html)
 * [Store UUID in an optimized way](https://www.percona.com/blog/2014/12/19/store-uuid-optimized-way/)
 * [《江南Style》如何衝破YouTube的計數器](http://www.cw.com.tw/article/article.action?id=5063028)
+* [資料庫索引數據結構及主鍵設計(b+tree)(part 1)](http://www.slideshare.net/yftzeng/btreepart-1)
