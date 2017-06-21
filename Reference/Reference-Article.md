@@ -18,6 +18,10 @@
 * [《英雄联盟》玩家聊天服务的持久层演进](http://bbs.gameres.com/thread_485619.html)
 * [KKBOX Case Study – Amazon Web Services (AWS)](http://aws.amazon.com/tw/solutions/case-studies/kkbox/)
 
+## HTTP Cache
+* [循序漸進理解 HTTP Cache 機制 | TechBridge 技術共筆部落格](http://blog.techbridge.cc/2017/06/17/cache-introduction/)
+
+
 ## Python
 * [Python + Django 如何支撑了 7 亿月活用户的 Instagram？](http://python.jobbole.com/87814/)
     * [Sharding & IDs at Instagram](https://engineering.instagram.com/sharding-ids-at-instagram-1cf5a71e5a5c)
