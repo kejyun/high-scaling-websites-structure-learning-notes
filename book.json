@@ -1,11 +1,18 @@
 {
-  "plugins": ["disqus","ga"],
+  "plugins": ["disqus","ga", "adsense"],
   "pluginsConfig": {
     "disqus": {
       "shortName": "kejyun-high-scaling-websites-structure"
     },
     "ga": {
       "token": "UA-31063691-11"
+    },
+    "adsense": {
+        "client": "ca-pub-1990193713845546",
+        "slot": "2858259611",
+        "format": "auto",
+        "element": ".page-inner section",
+        "position": "top"
     }
   }
 }
